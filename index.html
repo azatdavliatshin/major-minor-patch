@@ -1,40 +1,436 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>m.m.p</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/league.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+
+    <style>
+      .highlight {
+        color: #ff2c2d;
+      }
+
+      .introduction-grid {
+          display: flex;
+          align-items: center;
+          gap: calc(var(--r-block-margin) * 2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section id="title">
+          <h1>
+            <span class="highlight">m</span>ajor.<span class="highlight">m</span
+            >inor.<span class="highlight">p</span>atch
+          </h1>
+          <h2>without headache</h2>
+          <img src="./assets/github_qr_code.png" height="150px"/>
+        </section>
+        <section>
+            <section data-auto-animate  id="self-introduction-intro">
+                <h2>Let's get acquainted!</h2>
+            </section>
+            <section data-auto-animate  id="self-introduction">
+              <h2>Let's get acquainted!</h2>
+              <div class="introduction-grid">
+                  <img src="./assets/azat.jpeg" alt="" height="300px">
+                  <table style="font-size: 22px;">
+                      <tbody>
+                          <tr>
+                              <td style="color: var(--r-link-color);">First Name:</td>
+                              <td>Azat</td>
+                          </tr>
+                          <tr>
+                              <td style="color: var(--r-link-color);">Last Name:</td>
+                              <td>Davliatshin</td>
+                          </tr>
+                          <tr>
+                              <td style="color: var(--r-link-color);">Experience:</td>
+                              <td>
+                                  10 years in JS development
+                                  </br>
+                                  Life Science & Healthcare
+                                  </br>
+                                  Lead Software Engineer / Software Architect
+                                  </br>
+                                  Mentor / TI
+                              </td>
+
+                          </tr>
+                          <tr>
+                              <td style="color: var(--r-link-color);">Expertise:</td>
+                              <td>FE, BE, Clouds, Mobile, Legacy</td>
+                          </tr>
+                          <tr>
+                              <td style="color: var(--r-link-color);">Criminal Record:</td>
+                              <td>Overslept whole working day</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+            </section>
+        </section>
+        <section>
+            <section id="agenda-intro" data-auto-animate>
+                <h1>Agenda</h1>
+            </section>
+            <section id="agenda" data-auto-animate>
+                <h1>Agenda</h1>
+                <ul>
+                    <li class="fragment">Problem statement</li>
+                    <li class="fragment">Boring theory</li>
+                    <li class="fragment">Related use case</li>
+                    <li class="fragment">Solution</li>
+                    <li class="fragment">More use cases</li>
+                    <li class="fragment">Summary</li>
+                </ul>
+            </section>
+        </section>
+        <section id="problem-statement-title">
+            <h1 class="r-fit-text">problem statement</h1>
+        </section>
+        <section id="problem-statement">
+            <h6>Problem Statement</h6>
+            <section id="forever-alone">
+                <img src="./assets/бахнем.jpg" alt="" width="80%" />
+            </section>
+            <section id="single-developer">
+                <img src="./assets/alone.jpeg" alt="" width="60%" />
+            </section>
+            <section id="swiss-knife-man">
+                <img src="./assets/swiss.jpg" alt="" width="50%" />
+                <h6>business requirements</h6>
+            </section>
+            <section id="ai" data-auto-animate style="display: flex; align-items: center; gap: 12px">
+                <img src="./assets/HAL9000.svg.png" alt="" width="50%" />
+            </section>
+            <section id="ai-mobile" data-auto-animate style="display: flex; align-items: center; gap: 12px">
+                <img src="./assets/HAL9000.svg.png" alt="" style="flex: 1;" width="400px"/>
+                <img src="./assets/phones.png" style="flex: 1;" width="300px"/>
+            </section>
+            <section id="info-plist-intro">
+                <h3>Info.plist</h3>
+                <pre>
+                    <code data-line-numbers="|3-4" class="language-xml" data-trim><plist version="1.0">
+<dict>
+    <key>CFBundleVersion</key>
+    <string>{$CFBundleVersion}</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleDisplayName</key>
+    <string>HAL9000</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    ...
+</dict>
+</plist>
+                    </code>
+                </pre>
+            </section>
+            <section id="info-plist-screen">
+                <img src="./assets/intune.jpeg" height="600px" />
+            </section>
+            <section id="info-plist-implemented">
+                <h3>Info.plist</h3>
+                <pre>
+                    <code data-line-numbers="3-4" class="language-xml" data-trim><plist version="1.0">
+<dict>
+    <key>CFBundleVersion</key>
+    <string>92</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleDisplayName</key>
+    <string>HAL9000</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    ...
+</dict>
+</plist>
+                    </code>
+                </pre>
+            </section>
+            <section id="intune-results">
+                <img src="./assets/intune_92.png" />
+                <img src="./assets/intune_93.png" />
+                <img src="./assets/intune_94.png" />
+            </section>
+            <section id="goals-to-achieve">
+                <p>Goals:</p>
+                <ul>
+                    <li class="fragment">Should reflect state</li>
+                    <li class="fragment">Easy to maintain</li>
+                    <li class="fragment">Automatization</li>
+                    <li class="fragment highlight">Semantic (at least for version)</li>
+                </ul>
+            </section>
+        </section>
+        <section id="some-boring-theory-title">
+            <h1 class="r-fit-text">Semantic Versioning</h1>
+        </section>
+        <section id="some-boring-theory">
+            <h6>Semantic Versioning</h6>
+            <section id="sematic-release">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div>
+                        <p style="text-align: left;">Given a version number <span class="highlight">MAJOR</span>.<span class="highlight">MINOR</span>.<span class="highlight">PATCH</span>, increment the:</p>
+                        <ol>
+                            <li><span class="highlight">MAJOR</span> version when you make incompatible API changes</li>
+                            <li><span class="highlight">MINOR</span> version when you add functionality in a backward compatible manner</li>
+                            <li><span class="highlight">PATCH</span> version when you make backward compatible bug fixes</li>
+                        </ol>
+                    </div>
+                    <img src="./assets/semver_qr.png" width="150px" height="150px"/>
+                </div>
+            </section>
+            <section id="sematic-release-non-api">
+                <img src="./assets/joke.png" height="550px"/>
+            </section>
+            <section id="goals-to-achieve-review">
+                <p>Goals:</p>
+                <ul>
+                    <li>Should reflect state</li>
+                    <li>Easy to maintain</li>
+                    <li>Automatization</li>
+                    <li>Semantic (at least for version)</li>
+                </ul>
+            </section>
+        </section>
+        <section id="past-use-cases-title">
+            <h1 class="r-fit-text">Related experience</h1>
+        </section>
+        <section id="past-use-cases">
+            <h6>Related experience</h6>
+            <img src="./assets/TV.jpg"/>
+        </section>
+        <section id="past-use-cases-expanded">
+            <h6>Related experience</h6>
+            <img src="./assets/TV.png"/>
+        </section>
+        <section id="past-use-cases-versions">
+            <h6>Related experience</h6>
+            <img src="./assets/TV _versions.png"/>
+        </section>
+        <section id="semantic-release-title">
+            <h1 class="r-fit-text">semantic-release</h1>
+        </section>
+        <section id="semantic-release" style="height: 100%;">
+            <h6>semantic-release</h6>
+            <section id="semantic-release-definition">
+                <div style="display: flex;">
+                    <blockquote style="margin: auto;">
+                        semantic-release automates the whole package <span class="highlight">release</span> workflow including: determining the <span class="highlight">next version number</span>, generating the <span class="highlight">release notes</span>, and publishing the package.
+                    </blockquote>
+                    <img src="./assets/semantic_release_qr.png" height="200px" />
+                </div>
+            </section>
+            <section id="semantic-release-works">
+                <h3>How does it work?</h3>
+                <p>During <strong class="highlight">CI</strong> pipeline</p>
+                <ol>
+                    <li class="fragment">Target branch(es) for release</li>
+                    <li class="fragment">Commit messages format</li>
+                    <li class="fragment">Release: define next version number</li>
+                    <li class="fragment">Release: create git tag</li>
+                    <li class="fragment">Release: create release</li>
+                    <li class="fragment">Release: generate release notes</li>
+                    <s><li class="fragment">Publish to NPM registry</li></s>
+                </ol>
+            </section>
+            <section id="semantic-release-example">
+                <h3 class="r-fit-text">Tiny Demo</h3>
+            </section>
+        </section>
+        <section id="result-title">
+            <h1 class="r-fit-text">Let's the magic happens</h1>
+        </section>
+         <section id="solution-draft-1-title">
+             <h1 class="r-fit-text">Draft 1</h1>
+         </section>
+        <section id="solution-draft-1">
+            <h6>Draft 1</h6>
+
+            <section id="draft-1-actions">
+                <ul>
+                    <li class="fragment">Release is added to CI pipeline</li>
+                    <li class="fragment">Tag === CFBundleVersion</li>
+                </ul>
+            </section>
+            <section id="draft-1-outcome">
+                <img src="assets/bundle.png" />
+                <img class="fragment" src="assets/failed.png" style="position: absolute; left: 30%; transform: scale(1.5) rotate(-30deg);" />
+            </section>
+            <section id="draft-1-results">
+                <h3>Issues</h3>
+                <ul>
+                    <li class="fragment">Every small change to deliver - release</li>
+                    <li class="fragment">Semantic headache</li>
+                    <li class="fragment">How to differentiate between stage and prod?</li>
+                </ul>
+            </section>
+        </section>
+        <section id="solution-draft-2-title">
+            <h1 class="r-fit-text">Draft 2</h1>
+        </section>
+       <section id="solution-draft-2">
+           <h6>Draft 2</h6>
+
+           <section id="draft-1-actions">
+               <ul>
+                   <li class="fragment">Release is added to CI pipeline</li>
+                   <li class="fragment">Tag === CFBundleShortVersionString</li>
+                   <li class="fragment">Incremental CFBundleVersion on each pipeline build</li>
+               </ul>
+           </section>
+           <section id="draft-2-outcome">
+               <img src="assets/bundle-2.png" />
+           </section>
+           <section id="draft-2-results">
+               <h3>Issues</h3>
+               <ul>
+                   <li class="fragment">How to differentiate between stage and prod?</li>
+                   <li class="fragment">Incremental delivery</li>
+               </ul>
+           </section>
+       </section>
+       <section id="solution-final-draft-title">
+           <h1 class="r-fit-text">Final Draft</h1>
+       </section>
+      <section id="solution-final-draft">
+          <h6>Final Draft</h6>
+
+          <section id="final-draft-actions">
+              <ul>
+                  <li class="fragment">Pre-release</li>
+                  <ul>
+                      <li class="fragment">"next" branch configured for pre-release</li>
+                      <li class="fragment">Pre-release is created during CI pipeline (<span class="highlight">2.2.0-next.1</span>)</li>
+                      <li class="fragment">Tag is created during CI pipeline (<span class="highlight">2.2.0-next.1</span>)</li>
+                  </ul>
+                  <li class="fragment">CI script pust 4 numbers into CFBundleShortVersionString (<span class="highlight">2.2.0.1</span>)</li>
+                  <li class="fragment">Incremental CFBundleVersion on each pipeline build</li>
+                  <li class="fragment">When pre-release branch is merged, stable release is created (<span class="highlight">2.2.0</span>)</li>
+              </ul>
+          </section>
+          <section id="final-draft-outcome">
+              <img src="assets/bundle-3.png" height="600px" />
+          </section>
+          <section id="final-draft-results">
+              <h3>Outcomes</h3>
+              <ul>
+                  <li class="fragment">On the same page with stakeholders</li>
+                  <li class="fragment">Easy to maintain for production</li>
+                  <li class="fragment">Simple releases = simple deployment + simple testing</li>
+                  <li class="fragment">I'm happy 🤩</li>
+              </ul>
+          </section>
+      </section>
+        <section id="other-use-cases-title">
+            <h1 class="r-fit-text">More use cases</h1>
+        </section>
+        <section id="other-use-cases">
+            <h6>More use cases</h6>
+            <section id="use-case-npm">
+                <h2>NPM</h2>
+                <ul>
+                    <li>UI Kit</li>
+                    <li>SDK</li>
+                    <li>...</li>
+                </ul>
+            </section>
+            <section id="use-case-api">
+                <h2>API</h2>
+                <h3>Docker tag</h3>
+                <ul>
+                    <li class="fragment">Build BE</li>
+                    <li class="fragment">Release -> new git tag</li>
+                    <li class="fragment">Build docker image with release tag</li>
+                    <li class="fragment">Publish docker image</li>
+                </ul>
+                <p class="fragment">Profit: clear connection between docker image and API version</p>
+            </section>
+            <section id="use-case-fe">
+                <h2>Frontend</h2>
+                <ul>
+                    <li class="fragment">FE version === Product version</li>
+                    <li class="fragment">Microfrontend architecture</li>
+                    <li class="fragment">As part of the complex system</li>
+                </ul>
+            </section>
+        </section>
+        <section id="summary-title">
+            <h1 class="r-fit-text">Summary</h1>
+        </section>
+        <section id="summary" style="height: 100%;">
+            <div style="height: 100%; display: flex; flex-direction: column;">
+                <h6>Summary</h6>
+                <div style="margin: auto;">
+                    <ol start="0">
+                        <li class="fragment">Does anybody need this?</li>
+                        <li class="fragment">Build communication</li>
+                        <li class="fragment">Define process</li>
+                        <li class="fragment">Add automatization</li>
+                        <li class="fragment">Have fun! 😊</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section id="farewell">
+            <h2>Рәхмәт!</h2>
+			<div style="display: flex; align-items: center; justify-content: center;">
+			 <div style="display: flex; flex-direction: column; gap: 12px; justify-content: center; flex: 1;">
+				<p>Presentation</p>
+				<img src="./assets/github_qr_code.png"/>
+			 </div>
+				<div style="display: flex; flex-direction: column; gap: 12px; justify-content: center; flex: 1;">
+				    <p>Telegram</p>
+					<img src="./assets/telegram_qr_code.png"/>
+				</div>
+				<div style="display: flex; flex-direction: column; gap: 12px; justify-content: center; flex: 1;">
+				    <p>LinkedIn</p>
+					<img src="./assets/linkedin_qr_code.png"/>
+				</div>
 			</div>
-		</div>
+        </section>
+      </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        transition: "none",
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        slideNumber: "c/t",
+      }).then(() => {
+        const slideNumbersDOM = document.querySelector(".slide-number");
+        slideNumbersDOM.style.fontSize = "20px";
+        slideNumbersDOM.style.left = "24px";
+        slideNumbersDOM.style.right = "auto";
+      });
+    </script>
+  </body>
 </html>
