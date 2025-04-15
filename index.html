@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/league.css" />
+    <link rel="stylesheet" href="dist/theme/night.css" />
 
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
@@ -26,25 +26,54 @@
           align-items: center;
           gap: calc(var(--r-block-margin) * 2);
       }
+
+      .title {
+          text-transform: uppercase !important;
+      }
+
+      .grid-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: auto;
+          gap: 10px;
+          position: absolute;
+          top: 39%;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+
+      .grid-container div {
+          background-color: red;
+          padding: 0 12px;
+          text-align: center;
+      }
+
+      .big-item {
+          grid-column: span 3;
+      }
+
+      .flex-column {
+
+      }
     </style>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <section id="title">
-          <h1>
+          <h1 class="r-fit-text title">
             <span class="highlight">m</span>ajor.<span class="highlight">m</span
             >inor.<span class="highlight">p</span>atch
           </h1>
           <h2>without headache</h2>
-          <img src="./assets/github_qr_code.png" height="150px"/>
+          <img src="./assets/github_qr_code.png" height="200px"/>
         </section>
         <section>
             <section data-auto-animate  id="self-introduction-intro">
-                <h2>Let's get acquainted!</h2>
+                <h1 class="r-fit-text title">let's get acquainted!</h1>
             </section>
             <section data-auto-animate  id="self-introduction">
-              <h2>Let's get acquainted!</h2>
+              <h1 class="r-fit-text title">let's get acquainted!</h1>
               <div class="introduction-grid">
                   <img src="./assets/azat.jpeg" alt="" height="300px">
                   <table style="font-size: 22px;">
@@ -85,25 +114,25 @@
         </section>
         <section>
             <section id="agenda-intro" data-auto-animate>
-                <h1>Agenda</h1>
+                <h1 class="title r-fit-text">agenda</h1>
             </section>
             <section id="agenda" data-auto-animate>
-                <h1>Agenda</h1>
+                <h1 class="title">agenda</h1>
                 <ul>
-                    <li class="fragment">Problem statement</li>
-                    <li class="fragment">Boring theory</li>
-                    <li class="fragment">Related use case</li>
-                    <li class="fragment">Solution</li>
-                    <li class="fragment">More use cases</li>
-                    <li class="fragment">Summary</li>
+                    <li class="fragment">problem statement</li>
+                    <li class="fragment">boring theory</li>
+                    <li class="fragment">related use case</li>
+                    <li class="fragment">solution</li>
+                    <li class="fragment">more use cases</li>
+                    <li class="fragment">summary</li>
                 </ul>
             </section>
         </section>
         <section id="problem-statement-title">
-            <h1 class="r-fit-text">problem statement</h1>
+            <h1 class="r-fit-text title">problem statement</h1>
         </section>
         <section id="problem-statement">
-            <h6>Problem Statement</h6>
+            <h6>problem statement</h6>
             <section id="forever-alone">
                 <img src="./assets/бахнем.jpg" alt="" width="80%" />
             </section>
@@ -143,7 +172,10 @@
                 </pre>
             </section>
             <section id="info-plist-screen">
-                <img src="./assets/intune.jpeg" height="600px" />
+                <img src="./assets/intune.jpeg" height="600px"/>
+            </section>
+            <section id="info-plist-screen-zoomed">
+                <img src="./assets/intune-zoomed.png"/>
             </section>
             <section id="info-plist-implemented">
                 <h3>Info.plist</h3>
@@ -174,18 +206,18 @@
             <section id="goals-to-achieve">
                 <p>Goals:</p>
                 <ul>
-                    <li class="fragment">Should reflect state</li>
-                    <li class="fragment">Easy to maintain</li>
-                    <li class="fragment">Automatization</li>
-                    <li class="fragment highlight">Semantic (at least for version)</li>
+                    <li class="fragment">should reflect state</li>
+                    <li class="fragment">easy to maintain</li>
+                    <li class="fragment">automatization</li>
+                    <li class="fragment highlight">semantic (at least for version)</li>
                 </ul>
             </section>
         </section>
         <section id="some-boring-theory-title">
-            <h1 class="r-fit-text">Semantic Versioning</h1>
+            <h1 class="r-fit-text title">semantic versioning</h1>
         </section>
         <section id="some-boring-theory">
-            <h6>Semantic Versioning</h6>
+            <h6>semantic versioning</h6>
             <section id="sematic-release">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <div>
@@ -196,7 +228,7 @@
                             <li><span class="highlight">PATCH</span> version when you make backward compatible bug fixes</li>
                         </ol>
                     </div>
-                    <img src="./assets/semver_qr.png" width="150px" height="150px"/>
+                    <img src="./assets/semver_qr.png" width="200px" />
                 </div>
             </section>
             <section id="sematic-release-non-api">
@@ -213,22 +245,61 @@
             </section>
         </section>
         <section id="past-use-cases-title">
-            <h1 class="r-fit-text">Related experience</h1>
+            <h1 class="r-fit-text title">Related experience</h1>
         </section>
         <section id="past-use-cases">
-            <h6>Related experience</h6>
+            <h6>related experience</h6>
             <img src="./assets/TV.jpg"/>
         </section>
         <section id="past-use-cases-expanded">
-            <h6>Related experience</h6>
-            <img src="./assets/TV.png"/>
+            <h6>related experience</h6>
+            <img src="./assets/TV_raw.png"/>
+            <div class="grid-container">
+                <div>AV</div>
+                <div>APP</div>
+                <div>Ad</div>
+                <div class="big-item">UI</div>
+                <div>CORE</div>
+                <div>OS</div>
+                <div>RC</div>
+            </div>
         </section>
         <section id="past-use-cases-versions">
-            <h6>Related experience</h6>
-            <img src="./assets/TV _versions.png"/>
+            <h6>related experience</h6>
+            <img src="./assets/TV_raw.png"/>
+            <div class="grid-container" style="top: 28%;transform: scale(0.75) translateX(-67%);">
+                <div >
+                    <div>AV</div>
+                    <small>[1.1.9]</small>
+                </div>
+                <div>
+                    <div>APP</div>
+                    <small>[1.0.0]</small>
+                </div>
+                <div>
+                    <div>Ad</div>
+                    <small>[1.0.10]</small>
+                </div>
+                <div class="big-item">
+                    <div>UI</div>
+                    <small>[2.3.56]</small>
+                </div>
+                <div>
+                    <div>CORE</div>
+                    <small>[1.1.1]</small>
+                </div>
+                <div>
+                    <div>OS</div>
+                    <small>[2.2.2]</small>
+                </div>
+                <div>
+                    <div>RC</div>
+                    <small>[4.0.0]</small>
+                </div>
+            </div>
         </section>
         <section id="semantic-release-title">
-            <h1 class="r-fit-text">semantic-release</h1>
+            <h1 class="r-fit-text title">semantic-release</h1>
         </section>
         <section id="semantic-release" style="height: 100%;">
             <h6>semantic-release</h6>
@@ -244,32 +315,32 @@
                 <h3>How does it work?</h3>
                 <p>During <strong class="highlight">CI</strong> pipeline</p>
                 <ol>
-                    <li class="fragment">Target branch(es) for release</li>
-                    <li class="fragment">Commit messages format</li>
-                    <li class="fragment">Release: define next version number</li>
-                    <li class="fragment">Release: create git tag</li>
-                    <li class="fragment">Release: create release</li>
-                    <li class="fragment">Release: generate release notes</li>
-                    <s><li class="fragment">Publish to NPM registry</li></s>
+                    <li class="fragment">target branch(es) for release</li>
+                    <li class="fragment">commit messages format</li>
+                    <li class="fragment">release: define next version number</li>
+                    <li class="fragment">release: create git tag</li>
+                    <li class="fragment">release: create release</li>
+                    <li class="fragment">release: generate release notes</li>
+                    <s><li class="fragment">publish to NPM registry</li></s>
                 </ol>
             </section>
             <section id="semantic-release-example">
-                <h3 class="r-fit-text">Tiny Demo</h3>
+                <h3 class="r-fit-text title">Tiny Demo</h3>
             </section>
         </section>
         <section id="result-title">
-            <h1 class="r-fit-text">Let's the magic happens</h1>
+            <h1 class="r-fit-text title">Let's the magic happens</h1>
         </section>
          <section id="solution-draft-1-title">
-             <h1 class="r-fit-text">Draft 1</h1>
+             <h1 class="r-fit-text title">Draft 1</h1>
          </section>
         <section id="solution-draft-1">
-            <h6>Draft 1</h6>
+            <h6 >draft 1</h6>
 
             <section id="draft-1-actions">
                 <ul>
-                    <li class="fragment">Release is added to CI pipeline</li>
-                    <li class="fragment">Tag === CFBundleVersion</li>
+                    <li class="fragment">release is added to CI pipeline</li>
+                    <li class="fragment">tag === CFBundleVersion</li>
                 </ul>
             </section>
             <section id="draft-1-outcome">
@@ -279,23 +350,23 @@
             <section id="draft-1-results">
                 <h3>Issues</h3>
                 <ul>
-                    <li class="fragment">Every small change to deliver - release</li>
-                    <li class="fragment">Semantic headache</li>
-                    <li class="fragment">How to differentiate between stage and prod?</li>
+                    <li class="fragment">every small change to deliver - release</li>
+                    <li class="fragment">semantic headache</li>
+                    <li class="fragment">how to differentiate between stage and prod?</li>
                 </ul>
             </section>
         </section>
         <section id="solution-draft-2-title">
-            <h1 class="r-fit-text">Draft 2</h1>
+            <h1 class="r-fit-text title">Draft 2</h1>
         </section>
        <section id="solution-draft-2">
-           <h6>Draft 2</h6>
+           <h6>draft 2</h6>
 
            <section id="draft-1-actions">
                <ul>
-                   <li class="fragment">Release is added to CI pipeline</li>
-                   <li class="fragment">Tag === CFBundleShortVersionString</li>
-                   <li class="fragment">Incremental CFBundleVersion on each pipeline build</li>
+                   <li class="fragment">release is added to CI pipeline</li>
+                   <li class="fragment">tag === CFBundleShortVersionString</li>
+                   <li class="fragment">incremental CFBundleVersion on each pipeline build</li>
                </ul>
            </section>
            <section id="draft-2-outcome">
@@ -304,48 +375,48 @@
            <section id="draft-2-results">
                <h3>Issues</h3>
                <ul>
-                   <li class="fragment">How to differentiate between stage and prod?</li>
-                   <li class="fragment">Incremental delivery</li>
+                   <li class="fragment">how to differentiate between stage and prod?</li>
+                   <li class="fragment">incremental delivery</li>
                </ul>
            </section>
        </section>
        <section id="solution-final-draft-title">
-           <h1 class="r-fit-text">Final Draft</h1>
+           <h1 class="r-fit-text title">Final Draft</h1>
        </section>
       <section id="solution-final-draft">
-          <h6>Final Draft</h6>
+          <h6>final draft</h6>
 
           <section id="final-draft-actions">
               <ul>
-                  <li class="fragment">Pre-release</li>
+                  <li class="fragment">pre-release</li>
                   <ul>
                       <li class="fragment">"next" branch configured for pre-release</li>
-                      <li class="fragment">Pre-release is created during CI pipeline (<span class="highlight">2.2.0-next.1</span>)</li>
-                      <li class="fragment">Tag is created during CI pipeline (<span class="highlight">2.2.0-next.1</span>)</li>
+                      <li class="fragment">pre-release is created during CI pipeline (<span class="highlight">2.2.0-next.1</span>)</li>
+                      <li class="fragment">tag is created during CI pipeline (<span class="highlight">2.2.0-next.1</span>)</li>
                   </ul>
-                  <li class="fragment">CI script pust 4 numbers into CFBundleShortVersionString (<span class="highlight">2.2.0.1</span>)</li>
-                  <li class="fragment">Incremental CFBundleVersion on each pipeline build</li>
-                  <li class="fragment">When pre-release branch is merged, stable release is created (<span class="highlight">2.2.0</span>)</li>
+                  <li class="fragment">CI script puts 4 numbers into CFBundleShortVersionString (<span class="highlight">2.2.0.1</span>)</li>
+                  <li class="fragment">incremental CFBundleVersion on each pipeline build</li>
+                  <li class="fragment">when pre-release branch is merged, stable release is created (<span class="highlight">2.2.0</span>)</li>
               </ul>
           </section>
           <section id="final-draft-outcome">
               <img src="assets/bundle-3.png" height="600px" />
           </section>
           <section id="final-draft-results">
-              <h3>Outcomes</h3>
+              <h3>outcomes</h3>
               <ul>
-                  <li class="fragment">On the same page with stakeholders</li>
-                  <li class="fragment">Easy to maintain for production</li>
-                  <li class="fragment">Simple releases = simple deployment + simple testing</li>
+                  <li class="fragment">on the same page with stakeholders</li>
+                  <li class="fragment">easy to maintain for production</li>
+                  <li class="fragment">simple releases = simple deployment + simple testing</li>
                   <li class="fragment">I'm happy 🤩</li>
               </ul>
           </section>
       </section>
         <section id="other-use-cases-title">
-            <h1 class="r-fit-text">More use cases</h1>
+            <h1 class="r-fit-text title">More use cases</h1>
         </section>
         <section id="other-use-cases">
-            <h6>More use cases</h6>
+            <h6>more use cases</h6>
             <section id="use-case-npm">
                 <h2>NPM</h2>
                 <ul>
@@ -358,35 +429,36 @@
                 <h2>API</h2>
                 <h3>Docker tag</h3>
                 <ul>
-                    <li class="fragment">Build BE</li>
-                    <li class="fragment">Release -> new git tag</li>
-                    <li class="fragment">Build docker image with release tag</li>
-                    <li class="fragment">Publish docker image</li>
+                    <li class="fragment">build BE</li>
+                    <li class="fragment">release -> new git tag</li>
+                    <li class="fragment">build docker image with release tag</li>
+                    <li class="fragment">publish docker image</li>
                 </ul>
-                <p class="fragment">Profit: clear connection between docker image and API version</p>
+                <p class="fragment">PROFIT: clear connection between docker image and API version</p>
             </section>
             <section id="use-case-fe">
                 <h2>Frontend</h2>
                 <ul>
                     <li class="fragment">FE version === Product version</li>
-                    <li class="fragment">Microfrontend architecture</li>
-                    <li class="fragment">As part of the complex system</li>
+                    <li class="fragment">microfrontend architecture</li>
+                    <li class="fragment">as part of the complex system</li>
                 </ul>
             </section>
         </section>
         <section id="summary-title">
-            <h1 class="r-fit-text">Summary</h1>
+            <h1 class="r-fit-text title">Summary</h1>
         </section>
         <section id="summary" style="height: 100%;">
             <div style="height: 100%; display: flex; flex-direction: column;">
                 <h6>Summary</h6>
                 <div style="margin: auto;">
                     <ol start="0">
-                        <li class="fragment">Does anybody need this?</li>
-                        <li class="fragment">Build communication</li>
-                        <li class="fragment">Define process</li>
-                        <li class="fragment">Add automatization</li>
-                        <li class="fragment">Have fun! 😊</li>
+                        <li class="fragment">does anybody need this?</li>
+                        <li class="fragment">build communication</li>
+                        <li class="fragment">define process</li>
+                        <li class="fragment">document process</li>
+                        <li class="fragment">add automatization</li>
+                        <li class="fragment">have fun! 😊</li>
                     </ol>
                 </div>
             </div>
